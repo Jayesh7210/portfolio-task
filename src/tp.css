@@ -1,9 +1,8 @@
-
+/* 🌙 Base Styles */
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
-
-
 
 body {
   background-color: white;
@@ -12,19 +11,22 @@ body {
 }
 
 body.dark {
-  background-color: #111;
-  color: white;
+  background-color: #0d1117;
+  color: #e6edf3;
 }
 
+/* 🌑 Navbar */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 20px 70px;
-transition: background 0.3s, color 0.3s;  
+  transition: background 0.3s, color 0.3s;
 }
 
-
+body.dark .navbar {
+  background-color: #161b22;
+}
 
 .logo {
   display: flex;
@@ -32,31 +34,32 @@ transition: background 0.3s, color 0.3s;
   gap: 15px;
   font-weight: bold;
   font-size: 25px;
-  transition: color 0.3s ease;
+  color: inherit;
 }
 
 .logo-img {
   width: 35px;
   height: 40px;
-  transition: filter 0.3s ease;
 }
 
-body.dark .logo-text {
-  color: #f0f6fc;
-}
-
-body.dark .logo-img {
-  filter: brightness(1.2);
-}
-.dark-toggle{
-   width: 40px;
+.dark-toggle {
+  width: 40px;
   height: 40px;
   display: flex;
   margin-left: 40px;
   padding: 0;
-  
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: inherit;
+  transition: transform 0.3s;
+}
+.dark-toggle:hover {
+  transform: rotate(20deg);
 }
 
+/* 🌐 Navigation Links */
 .nav-links {
   list-style: none;
   font-size: 20px;
@@ -64,8 +67,7 @@ body.dark .logo-img {
   gap: 50px;
   margin: 0;
   padding: 0;
-  font-weight: semi-bold;
-
+  font-weight: 600;
 }
 
 .nav-links a {
@@ -77,10 +79,13 @@ body.dark .logo-img {
 
 .nav-links a:hover {
   color: #054fa2;
-
 }
+
 body.dark .nav-links a {
   color: #e6edf3;
+}
+body.dark .nav-links a:hover {
+  color: #58a6ff;
 }
 
 .nav-right {
@@ -89,13 +94,13 @@ body.dark .nav-links a {
   gap: 25px;
 }
 
+/* 🦸 Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 80px 120px;
-    transition: background 0.3s, color 0.3s;
-
+  transition: background 0.3s, color 0.3s;
 }
 
 .hero-content {
@@ -105,29 +110,26 @@ body.dark .nav-links a {
 }
 
 .hello-badge {
- display: inline-block;
+  display: inline-block;
   padding: 12px 35px;
-  /* color: #fff; */
   font-size: 36px;
   font-weight: bold;
   background: linear-gradient(90deg, #32F6F6, #A6A79F);
-  border-radius: 70px 50px 50px 0px; 
+  border-radius: 70px 50px 50px 0px;
 }
 
 .hero-title {
-  font-size:64px;
+  font-size: 64px;
   font-weight: 500;
   color: #222;
-  margin-top: 10px ;
+  margin-top: 10px;
   margin-bottom: 0px;
-    transition: color 0.3s;
-
+  transition: color 0.3s;
 }
 
 body.dark .hero-title {
   color: #f0f6fc;
 }
-
 
 .highlight {
   text-decoration: underline;
@@ -154,11 +156,14 @@ body.dark .highlight {
   font-weight: lighter;
   transition: color 0.3s;
 }
+
 body.dark .hero-subtitle {
   color: #c9d1d9;
 }
 
-.hero-buttons {
+/* 🎯 Buttons */
+.hero-buttons,
+.side-buttons {
   margin-top: 35px;
   display: flex;
   gap: 20px;
@@ -174,23 +179,25 @@ body.dark .hero-subtitle {
   text-decoration: none;
   color: #fff;
   transition: all 0.3s ease;
-  
+  border: 3px solid white;
 }
 
 .btn-orange {
   background: linear-gradient(90deg, #DF580C, #FD993D);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
-  border: white 4px solid;
-  height: 25px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 
 .btn-dark {
   background: linear-gradient(90deg, #434343, #000000);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  border: white 4px solid;
-  height: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+body.dark .btn-dark {
+  background: linear-gradient(90deg, #6e7681, #1f2937);
+  border-color: #30363d;
+}
+
+/* 👤 Hero Image */
 .hero-image {
   position: relative;
   flex: 1;
@@ -208,6 +215,7 @@ body.dark .hero-subtitle {
   margin-left: 200px;
 }
 
+/* 🌀 Animations */
 @keyframes wave {
   0%, 100% { transform: rotate(0deg); }
   15% { transform: rotate(14deg); }
@@ -218,19 +226,22 @@ body.dark .hero-subtitle {
   70% { transform: rotate(0deg); }
 }
 
-.social-icons {
+/* 🌍 Social Icons */
+.social-icons,
+.social-icons-about {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.social-icons a {
+.social-icons a,
+.social-icons-about a {
   text-decoration: none;
-  color: #000; 
+  color: #000;
   font-size: 28px;
-  bottom: 10px;
   transition: color 0.3s;
 }
+
 body.dark .social-icons a,
 body.dark .social-icons-about a {
   color: #e6edf3;
@@ -240,135 +251,7 @@ body.dark .social-icons-about a:hover {
   color: #58a6ff;
 }
 
-.sidediv{
-  display: flex;
-}
-
-.side-buttons {
-  margin-top: 35px;
-  display: flex;
-  gap: 20px;
-  padding-top: 40px;
-  margin-left: -160px;
-  margin-right: 130px; 
-}
-
-.about-container {
-  position: relative;
-  padding: 0px 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  overflow: hidden;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-body.dark .about-container {
-  background-color: #0d1117; 
-  color: #e6edf3; 
-}
-
-.about-content {
-  max-width: 900px;
-  height: 100vh;
-  z-index: 2;
-  line-height: 1.7;
-  margin-right: -100px;
-  transition: color 0.3s ease;
-}
-
-.about-content h1 {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #222;
-  transition: color 0.3s ease;
-}
-
-body.dark .about-content h1 {
-  color: #f0f6fc;
-}
-
-.about-content h1 span {
-  font-size: 48px;
-  font-weight: bold;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-
-body.dark .about-content h1 span {
-  color: #58a6ff; 
-}
-
-.about-content p {
-  margin-bottom: 18px;
-  color: #555;
-  transition: color 0.3s ease;
-}
-
-body.dark .about-content p {
-  color: #adb6c2; 
-}
-
-.social-icons-about {
-  position: absolute;
-  left: 60px;
-  bottom: 10px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1;
-  color: #000; 
-  font-size: 28px;
-}
-.social-icons-about a {
-  text-decoration: none;
-  color: #000; 
-  font-size: 28px;
-}
-
-.blob {
-  position: absolute;
-z-index: 0;
-}
-
-.blob-left {
-  top: 10px;
-  left: 0%;
-  
-  width: 390px;
-  height: 530px;
-}
-
-.blob-yellow {
-  bottom:   0%;
-  left: 20%;
-  width: 16%;
-  height: 30%;
-  /* background: #ffeb3b; */
-  margin-bottom: 20px;
-}
-
-.blob-gray {
-  bottom: 0%;
-  right: 20%;
-  width: 17%;
-  height: 30%;
-  /* background: #ffeb3b; */
-}
-
-.blob-right {
-  top: 10%;
-  right: 0%;
-  width: 270px;
-  height: 80%;
-  /* background: #ffeb3b; */
-}
-
+/* 📧 Email Text */
 .email-text {
   position: absolute;
   bottom: 40px;
@@ -377,52 +260,43 @@ z-index: 0;
   font-size: 14px;
   color: #555;
 }
-.email-text a {
-  color: #555;
-  text-decoration: none;
-}
 body.dark .email-text,
 body.dark .email-text a {
   color: #9ba1a6;
 }
 
-
-
-
-.dark-toggle {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
+.email-text a {
+  color: #555;
+  text-decoration: none;
 }
 
-.dark-toggle:hover {
-  transform: rotate(15deg) scale(1.1);
+/* 💫 Blobs */
+.blob {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.9;
 }
-
-.dark-toggle-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  transition: filter 0.3s ease;
+.blob-left {
+  top: 10px;
+  left: 0%;
+  width: 390px;
+  height: 530px;
 }
-
-/* Optional – make icons adjust to theme */
-body.dark .dark-toggle-icon {
-  filter: brightness(1.2);
+.blob-yellow {
+  bottom: 0%;
+  left: 20%;
+  width: 16%;
+  height: 30%;
 }
-
-
-
-
-
-
-
-
-
-
+.blob-gray {
+  bottom: 0%;
+  right: 20%;
+  width: 17%;
+  height: 30%;
+}
+.blob-right {
+  top: 10%;
+  right: 0%;
+  width: 270px;
+  height: 80%;
+}
