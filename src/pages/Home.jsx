@@ -1,5 +1,5 @@
 import React from 'react'
-import profileImg from "../assets/image.png";
+import profileImg from "../assets/Image.png";
 
 
 import { TiSocialFacebookCircular ,
