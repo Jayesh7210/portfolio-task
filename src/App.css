@@ -260,13 +260,12 @@ body.dark .social-icons-about a:hover {
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #000;
   overflow: hidden;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 body.dark .about-container {
-  background-color: #0d1117; 
   color: #e6edf3; 
 }
 
@@ -300,7 +299,7 @@ body.dark .about-content h1 {
 
 
 body.dark .about-content h1 span {
-  color: #58a6ff; 
+  color: #fff; 
 }
 
 .about-content p {
