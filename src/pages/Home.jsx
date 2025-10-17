@@ -59,6 +59,10 @@ function Home() {
         <img src={profileImg} alt="Anish" className="profile-pic" />
       </div>
     </section>
+
+
+            <p className="email-text">sinhaanishkumara@outlook.com</p>
+
     </div>
     )
   

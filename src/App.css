@@ -18,7 +18,7 @@
   align-items: center;
   gap: 15px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 25px;
 }
 
 
@@ -26,13 +26,13 @@
 
 .logo-img {
   width: 35px;
-  height: 35px;
+  height: 40px;
 }
 
 
 .dark-toggle{
-   width: 30px;
-  height: 30px;
+   width: 40px;
+  height: 40px;
   display: flex;
   margin-left: 40px;
   padding: 0;
@@ -42,10 +42,13 @@
 /* nav links */
 .nav-links {
   list-style: none;
+  font-size: 20px;
   display: flex;
   gap: 50px;
   margin: 0;
   padding: 0;
+    font-weight: semi-bold;
+
 }
 
 /* link styles */
@@ -97,15 +100,15 @@
  display: inline-block;
   padding: 12px 35px;
   color: #fff;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: bold;
   background: linear-gradient(90deg, #32F6F6, #A6A79F);
   border-radius: 70px 50px 50px 0px; 
 }
 
 /* Title */
 .hero-title {
-  font-size: 3.5rem;
+  font-size:64px;
   font-weight: 500;
   color: #222;
   margin-top: 10px ;
@@ -127,12 +130,12 @@
 
 /* Subtitle */
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 30px;
   color: #000;
   margin-top: 0px;
   margin-bottom: 45px;
   line-height: 1.6;
-  font-weight: 100;
+  font-weight: lighter;
 }
 
 /* Buttons */
@@ -162,10 +165,6 @@
   height: 25px;
 }
 
-/* .btn-orange:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(255, 126, 95, 0.5);
-} */
 
 .btn-dark {
   background: linear-gradient(90deg, #434343, #000000);
@@ -174,12 +173,6 @@
   height: 25px;
 }
 
-/* .btn-dark:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
-} */
-
-/* Right image section */
 .hero-image {
   position: relative;
   flex: 1;
@@ -195,6 +188,8 @@
   height: 500px;
   object-fit: cover;
   z-index: 1;
+  margin-top: -300px;
+  margin-left: 200px;
 }
 
 /* Wave keyframes */
@@ -380,3 +375,11 @@ z-index: 0;
   color: #555;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
