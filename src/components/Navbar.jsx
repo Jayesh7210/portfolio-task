@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.svg";
-import moon from "../assets/moon.svg";
+import logo from "../assets/Logo.svg";
+import moon from "../assets/Moon.svg";
 
 
 const Navbar = () => {
